@@ -3,7 +3,7 @@
     var crystals = $("#crystals"); 
     var counter = 0; 
     var wins = 0; 
-    var loses = 0
+    var loses = 0;
     var crystal1 = Math.floor(Math.random() * 12) + 2; //assign and generate random number between 1-12
     var crystal2 = Math.floor(Math.random() * 12) + 2; 
     var crystal3 = Math.floor(Math.random() * 12) + 2; 
@@ -12,7 +12,7 @@
     var crystalImages = ['./assets/images/crystal1.png', './assets/images/crystal2.png', './assets/images/crystal3.png', './assets/images/crystal4.png'];
 
 
-    
+
     $(document).ready(function() {
          // displays values on screen
     $("#number-to-guess").text(targetNumber); 
@@ -29,3 +29,5 @@
       imageCrystal.attr("data-crystalvalue", numberOptions[i]);
       crystals.append(imageCrystal);
     }
+
+});
