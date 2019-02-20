@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    console.log("ready!")
+    console.log("ready!");
 
                 //assign values to variables
         var targetNumber = Math.floor(Math.random() * 101) + 19; // Generate random number between 19-120
-        var crystals = $("#crystals");
+        var crystals = $(".crystals");
         var counter = 0;
         var wins = 0;
         var losses = 0;
@@ -30,7 +30,7 @@ $(document).ready(function () {
             imageCrystal.attr("src", crystalImages[i]);
             imageCrystal.attr("data-crystalvalue", numberOptions[i]);
             crystals.append(imageCrystal);
-            console.log("checking first loop")
+            console.log("checking first loop");
         }
 
 
@@ -51,7 +51,7 @@ $(document).ready(function () {
             } else if (counter >= targetNumber) {
                 losses++;
                 $("#win-lose-message").text("You were eaten!");
-                $("loss").text(losses);
+                $("#loss").text(losses);
                 resetGame();
             }
         });
@@ -75,7 +75,7 @@ $(document).ready(function () {
                 imageCrystal.attr("src", crystalImages[i]);
                 imageCrystal.attr("data-crystalvalue", numberOptions[i]);
                 crystals.append(imageCrystal);
-                console.log("check reset crystal loop")
+                console.log("check reset crystal loop");
 
             }
             $("#number-to-guess").text(targetNumber);
