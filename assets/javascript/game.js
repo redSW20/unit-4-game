@@ -17,18 +17,20 @@ $(document).ready(function () {
 
         // displays values on screen
         $("#number-to-guess").text(targetNumber);
+        console.log(targetNumber)
         $("#win").text(wins);
         $("#loss").text(losses);
         $("#score").text(counter);
 
 
         // for loop to create crystals for every numberOption
-        for (let i = 0; i < numberOptions.length; i++) {
-            let imageCrystal = $("<img>");
+        for (var i = 0; i < numberOptions.length; i++) {
+            var imageCrystal = $("<img>");
             imageCrystal.addClass("crystal-image");
             imageCrystal.attr("src", crystalImages[i]);
             imageCrystal.attr("data-crystalvalue", numberOptions[i]);
             crystals.append(imageCrystal);
+            console.log("checking first loop")
         }
 
 
@@ -73,6 +75,8 @@ $(document).ready(function () {
                 imageCrystal.attr("src", crystalImages[i]);
                 imageCrystal.attr("data-crystalvalue", numberOptions[i]);
                 crystals.append(imageCrystal);
+                console.log("check reset crystal loop")
+
             }
             $("#number-to-guess").text(targetNumber);
             $("#score").text(counter);
