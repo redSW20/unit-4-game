@@ -66,7 +66,7 @@ $(document).ready(function () {
             Sapphire3 = Math.floor(Math.random() * 12) + 2;
             Opal4 = Math.floor(Math.random() * 12) + 2;
             numberOptions = [Ruby1, Peridot2, Sapphire3, Opal4];
-            crystalImages = ["./assets/images/Ruby1.jpg", "./assets/images/Peridot2.jpg", "./assets/images/Sapphire3.png", "./assets/images/Opal4.jpg"];
+            crystalImages = ["./assets/images/Ruby1.JPG", "./assets/images/Peridot2.JPG", "./assets/images/Sapphire3.png", "./assets/images/Opal4.jpg"];
             counter = 0;
             crystals.empty();
 
