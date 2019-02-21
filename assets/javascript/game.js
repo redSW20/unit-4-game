@@ -13,7 +13,7 @@ $(document).ready(function () {
         var Opal4 = Math.floor(Math.random() * 12) + 2;
 
         var numberOptions = [Ruby1, Peridot2, Sapphire3, Opal4]; // assign and create array for values and a seperate array for the images
-        var crystalImages = ["./assets/images/Ruby1.jpg", "./assets/images/Peridot2.jpg", "./assets/images/Sapphire3.png", "./assets/images/Opal4.jpg"];
+        var crystalImages = ["./assets/images/Ruby1.JPG", "./assets/images/Peridot2.JPG", "./assets/images/Sapphire3.png", "./assets/images/Opal4.jpg"];
 
         // displays values on screen
         $("#number-to-guess").text(targetNumber);
@@ -36,11 +36,12 @@ $(document).ready(function () {
 
         //the onClick event to set things in motion
 
-        crystals.on("click", "crystal-image", function () {
+        crystals.on("click", ".crystal-image", function () {
             var crystalvalue = ($(this).attr("data-crystalvalue"));
             crystalvalue = parseInt(crystalvalue);
             counter += crystalvalue;
             $("#score").text(counter);
+            console.log("click!");
 
             if (counter === targetNumber) {
                 wins++;
